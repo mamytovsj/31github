@@ -1,0 +1,26 @@
+-- 1. Удалить все товары с ценой 0 долларов.
+DELETE FROM products
+WHERE price = 0;
+
+-- 2. Снизить цену на 10% всех товаров в категории EL (электроника), у которых цена выше 100 долларов.
+UPDATE products
+SET price = price * 0.9
+WHERE category = 'EL' AND price > 100;
+
+-- 3. Добавить 3 товара в каждую из категорий.
+INSERT INTO products (title, category, price, quantity) VALUES
+    
+
+-- 4. Показать все колонки из таблицы товаров, у которых на складе осталось больше 10-ти штук,
+--    отсортировать товары по категории и по цене от большей к меньшей.
+SELECT *
+FROM products
+WHERE quantity > 10
+ORDER BY category, price DESC;
+
+  --5. Показать все колонки из таблицы товаров из категорий FD - еда и CL - одежда,
+--    цена которых в диапазоне от 10 до 50 долларов.
+--    Произвести расчет выручки при продаже всего количества товаров по указанной цене за единицу.
+SELECT *, price * quantity AS revenue
+FROM products
+WHERE category IN ('FD', 'CL') AND price BETWEEN 10 AND 50;
