@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="5" time="0.157" timestamp="2023-11-15T20:01:53.830441" hostname="DESKTOP-88CRSD5"><testcase classname="unit_tests.test_multiplication" name="test_multiplication_11[1-11]" time="0.001" /><testcase classname="unit_tests.test_multiplication" name="test_multiplication_11[2-22]" time="0.001" /><testcase classname="unit_tests.test_multiplication" name="test_multiplication_11[3-35]" time="0.002"><failure message="assert (11 * 3) == 35">num = 3, output = 35
+
+    @pytest.mark.parametrize("num, output", [(1, 11), (2, 22), (3, 35), (4, 44), (0, 0)])
+    def test_multiplication_11(num, output):
+&gt;       assert 11 * num == output
+E       assert (11 * 3) == 35
+
+test_multiplication.py:6: AssertionError</failure></testcase><testcase classname="unit_tests.test_multiplication" name="test_multiplication_11[4-44]" time="0.003" /><testcase classname="unit_tests.test_multiplication" name="test_multiplication_11[0-0]" time="0.003" /></testsuite></testsuites>
