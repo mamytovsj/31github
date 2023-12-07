@@ -1,0 +1,42 @@
+name = input("введите свое имя:")
+weight_kg = float(input("введите свой точный вес кг+гр:"))
+height_сm = int(input("введите свой рост в см:"))
+height_m = height_сm / 100
+bmi = weight_kg / (height_m * height_m)
+if 18.5 <= bmi <= 24.9:
+     is_healthy =True
+else:
+     is_healthy = False
+     print(f"Привет,{name}")
+     bmi = round(bmi,2)
+     print(f"Ваш BMI,{bmi}")
+     print(f"Здоровым ли вы себя чувствуете? {is_healthy}")
+     if is_healthy == True:
+          print("Вы находитесь в нормальном диапазоне BMI")
+
+
+
+
+
+# int_var  = 1
+# float_var = 2,4
+# str_var =f"\t HelloWorld {int_var}!"
+# bool_var = True
+# print(int_var)
+# print(float_var)
+# print(str_var)
+# print(bool_var)
+#
+# name = input("введите свое имя:")
+# print(f"Привет , {name}")
+#
+# a= 2
+# b= 6
+# sumAB = a+b
+# if sumAB < 2:
+#     print("сумма меньше двух")
+# else:
+#     print("сумма больше двух")
+#
+
+
