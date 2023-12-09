@@ -1,0 +1,21 @@
+public class ArrayExample {
+    public static void main(String[] args) {
+        // Создание массива целых чисел
+        int[] myArray = new int[5];
+
+        // Инициализация массива
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = i * 2;
+        }
+
+        // Вывод элементов массива
+        System.out.println("Элементы массива:");
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.println("myArray[" + i + "] = " + myArray[i]);
+        }
+
+        // Обращение к элементу массива по индексу
+        int indexToAccess = 2;
+        System.out.println("\nОбращение к элементу по индексу " + indexToAccess + ": " + myArray[indexToAccess]);
+    }
+}
