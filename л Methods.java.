@@ -1,0 +1,31 @@
+public class MethodsExample {
+
+    public static void main(String[] args) {
+        // Вызов метода для приветствия
+        printGreeting();
+
+        // Вызов метода для вычисления суммы двух чисел
+        int sumResult = addNumbers(5, 7);
+        System.out.println("Сумма двух чисел: " + sumResult);
+
+        // Вызов метода для проверки является ли число четным
+        int numberToCheck = 10;
+        boolean isEven = isEvenNumber(numberToCheck);
+        System.out.println(numberToCheck + " является четным числом? " + isEven);
+    }
+
+    // Метод для приветствия
+    public static void printGreeting() {
+        System.out.println("Привет, это моя первая программа с методами!");
+    }
+
+    // Метод для сложения двух чисел
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    // Метод для проверки четности числа
+    public static boolean isEvenNumber(int number) {
+        return number % 2 == 0;
+    }
+}
