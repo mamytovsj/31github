@@ -1,0 +1,33 @@
+public class ExperimentWithDataTypes {
+    public static void main(String[] args) {
+        // Целочисленные типы данных
+        int intValue = 10;
+        long longValue = 10000000000L;
+        short shortValue = 32767;
+        byte byteValue = 127;
+
+        // Типы данных с плавающей точкой
+        float floatValue = 3.14f;
+        double doubleValue = 2.71828;
+
+        // Символьный тип данных
+        char charValue = 'A';
+
+        // Логический тип данных
+        boolean booleanValue = true;
+
+        // Вывод значений переменных
+        System.out.println("Целочисленные типы:");
+        System.out.println("int: " + intValue);
+        System.out.println("long: " + longValue);
+        System.out.println("short: " + shortValue);
+        System.out.println("byte: " + byteValue);
+
+        System.out.println("\nТипы данных с плавающей точкой:");
+        System.out.println("float: " + floatValue);
+        System.out.println("double: " + doubleValue);
+
+        System.out.println("\nСимвольный тип данных:");
+        System.out.println("char: " + charValue);
+
+        System.out.println("\nЛогический тип данных
