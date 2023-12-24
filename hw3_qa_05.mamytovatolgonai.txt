@@ -1,0 +1,63 @@
+class Employee:
+    standard_number_of_vacation = 28
+
+    def __init__(self, first_name, last_name, position, experience):
+        self.__first_name = first_name
+        self.__last_name = last_name
+        self.__position = position
+        self.__experience = experience
+
+    # Геттеры
+    def get_first_name(self):
+        return self.__first_name
+
+    def get_last_name(self):
+        return self.__last_name
+
+    def get_position(self):
+        return self.__position
+
+    def get_experience(self):
+        return self.__experience
+
+    # Сеттеры
+    def set_first_name(self, first_name):
+        self.__first_name = first_name
+
+    def set_last_name(self, last_name):
+        self.__last_name = last_name
+
+    def set_position(self, position):
+        self.__position = position
+
+    def set_experience(self, experience):
+        self.__experience = experience
+
+    # Приватный метод для расчета отпускных
+    def __calculate_vacation(self):
+        if self.__position == 'преподаватель':
+            return Employee.standard_number_of_vacation + 15
+        else:
+            additional_days = max(0, (self.__experience - 10) * 2)
+            return Employee.standard_number_of_vacation + additional_days
+
+    # Публичный метод для вывода информации
+    def info(self):
+        print(f'ФИО: {self.__first_name} {self.__last_name}')
+        print(f'ДОЛЖНОСТЬ: {self.__position}')
+        print(f'СТАЖ РАБОТЫ: {self.__experience} лет')
+        total_vacation = self.__calculate_vacation()
+        bonus_days = total_vacation - Employee.standard_number_of_vacation
+        print(f'ОТПУСКНЫЕ: {Employee.standard_number_of_vacation} дней + БОНУС {bonus_days} дня = {total_vacation} дней')
+        print()
+
+
+# Создание объектов
+teacher = Employee("tolgonai", "mamytova", "преподаватель", 15)
+designer = Employee("asan", "asanov", "дизайнер", 15)
+accountant = Employee("dastan", "marat", "бухгалтер", 4)
+
+# Вывод информации о каждом сотруднике
+teacher.info()
+designer.info()
+accountant.info()
